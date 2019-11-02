@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game!</title>
+  </head>
+  <body>
+    <h2>{{question | safe}}</h2>
+    
+     
+    <form method="POST" action="/">
+        {% for answer in answers %}
+            <input type="radio" name="choice" value="{{answer['is_correct']}}"> 
+            {{answer['text']}} </input> <br>
+        {% endfor %}
+        <input type="submit">
+    </form>
+    
+     
+
+    
+  </body>
+</html>
